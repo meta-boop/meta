@@ -75,7 +75,7 @@ formulaire.addEventListener("submit", async function(event) {
 
     try {
 
-        const response = await fetch("http://localhost:3000/api/participant", {
+        const response = await fetch("/api/participant", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
