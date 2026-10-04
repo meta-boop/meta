@@ -1,0 +1,124 @@
+/* Style général de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* Fond blanc tout autour */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le rectangle horizontalement */
+    min-height: 100vh;
+}
+
+/* --- LA NAVBAR BLEUE --- */
+/* --- LA NAVBAR BLEUE CENTRÉE --- */
+.navbar {
+    width: 100%;
+    background-color: #4977d4; /* Le bleu de votre choix */
+    position: fixed; /* Reste collée en haut */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff; /* Blanc pur */
+    /* Optionnel : met en majuscules pour plus de style */
+    letter-spacing: 2px; /* Espacement des lettres moderne */
+}
+
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+/* --- LE RECTANGLE GRIS CLAIR (Centré avec du blanc autour) --- */
+.section-grise {
+    width: 90%;
+    max-width: 700px; /* Largeur du rectangle comme sur votre dessin */
+    background-color: #f3f4f6; /* GRIS CLAIR */
+    margin-top: 65px; /* Colle le haut du rectangle sous la navbar */
+    margin-bottom: 50px; /* Crée l'espace BLANC en bas du rectangle */
+    padding: 40px 50px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Arrondit légèrement les coins du rectangle */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Ombre très légère pour le relief */
+}
+/* --- LE RECTANGLE GRIS CLAIR (Centré avec du blanc autour) --- */
+* Conteneur interne */
+.form-content {
+    width: 100%;
+}
+
+.form-content p {
+    color: #4b5563;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937; /* Texte sombre sur le gris clair */
+}
+/* --- LES CHAMPS DU FORMULAIRE --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #374151;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff; /* Les champs restent blancs pour ressortir */
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #1f2937;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+button {
+    width: auto; /* Le bouton ne prend plus toute la largeur */
+    padding: 10px 30px; /* Réduit sa taille */
+    background: #10b945; /* Un beau vert moderne et pro */
+    border: none;
+    border-radius: 6px;
+    color: #ffffff; /* Texte en blanc pour le contraste */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.footer {
+    width: 100%;
+    background-color: #ffffff; /* Fond blanc sous le rectangle gris */
+    color: #6b7280; /* Texte gris discret */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f3f4f6;
+    font-size: 0.9rem;
+}
+
